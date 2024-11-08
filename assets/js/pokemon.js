@@ -22,4 +22,10 @@ class Pokemon {
 
     return sum;
   }
+
+  getRandomFlavorText() {
+    return this.flavorTexts[
+      Math.floor(this.flavorTexts.length * Math.random())
+    ];
+  }
 }

@@ -66,11 +66,7 @@ function pokemonToDetailPage(pokemon) {
         </div>
         <div class="pokemon-stats">
           <h1 class="details-title">Flavor Text</h1>
-          <p class="flavor-text">${
-            pokemon.flavorTexts[
-              Math.floor(pokemon.flavorTexts.length * Math.random())
-            ]
-          }</p>
+          <p class="flavor-text">${pokemon.getRandomFlavorText()}</p>
           <h1 class="details-title">Base Stats</h1>
           <div class="stats">
             <span class="stats-label">HP:</span>
