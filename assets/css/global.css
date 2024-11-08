@@ -10,8 +10,10 @@ body {
 .content {
   width: 100vw;
   height: 100vh;
-  padding: 1rem;
-  background-color: #fff;
+}
+
+.hidden {
+  display: none !important;
 }
 
 @media screen and (min-width: 992px) {
