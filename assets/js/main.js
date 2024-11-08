@@ -2,7 +2,7 @@ const pokemonList = document.getElementById("pokemons");
 const pokemonDetailPage = document.getElementById("pokemon-detail");
 const loadMoreButton = document.getElementById("loadMore");
 
-const maxRecords = 1302; // current max pokemon
+const maxRecords = 151; // current max pokemon
 const limit = 10;
 let offset = 0;
 
