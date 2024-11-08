@@ -128,7 +128,7 @@ function pokemonToDetailPage(pokemon) {
           <span class="stats-value">${pokemon.getTotalPoints()}</span>
           <progress class="stats-bar bar-${
             pokemon.mainType
-          }" value="${pokemon.getTotalPoints()}" max="100"></progress>
+          }" value="${pokemon.getTotalPoints()}" max="600"></progress>
         </div>`
       // remover a primeira linha vazia
       .split("\n")
