@@ -39,6 +39,8 @@ class PokeAPI {
     const pokemonStats = await response.json();
     const pokemonSpecies = await this.getPokemonSpecies(id);
 
+    console.log(pokemonSpecies);
+
     const flavorTexts = pokemonSpecies.flavor_text_entries
       .filter(
         (data) => data.language.url === "https://pokeapi.co/api/v2/language/9/"
@@ -55,7 +57,7 @@ class PokeAPI {
       pokemonStats.name,
       pokemonMainType,
       pokemonTypes,
-      pokemonStats.sprites.other.dream_world.front_default
+      pokemonStats.sprites.other.showdown.front_default
     );
 
     pokemon.stats = pokemonStats.stats.map((stat) => stat.base_stat);
