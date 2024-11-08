@@ -226,6 +226,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 .pokemon-header .pokemon-images img {
@@ -237,6 +238,30 @@
 .pokemon-header .pokemon-images span {
   margin: 0.25rem 1.5rem;
   font-size: 1rem;
+}
+
+.arrow-button-left {
+  background-color: transparent;
+  border: none;
+  border-radius: 1rem;
+  font-size: 1rem;
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+  width: 50px;
+  position: absolute;
+  left: 0;
+}
+
+.arrow-button-right {
+  background-color: transparent;
+  border: none;
+  border-radius: 1rem;
+  font-size: 1rem;
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+  width: 50px;
+  position: absolute;
+  right: 0;
 }
 
 #return-to-pokemon-list {
@@ -399,7 +424,7 @@
 
   .pokemon-header .pokemon-images img {
     max-width: 100%;
-    height: 200px;
+    height: 125px;
     margin: 0.25rem 0.5rem;
   }
 }

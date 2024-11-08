@@ -58,6 +58,13 @@ function pokemonToDetailPage(pokemon) {
             </ol>
           </div>
           <div class="pokemon-images">
+            <button
+              class="arrow-button-left"
+              type="button"
+              onclick="loadPokemonStats(${pokemon.id - 1});"
+            >
+              <img src="assets/img/left-arrow.svg" alt="back button" />
+            </button>
             <img
               src="${pokemon.image}"
               alt="${pokemon.name}"
@@ -66,6 +73,13 @@ function pokemonToDetailPage(pokemon) {
               src="${pokemon.shinyImage}"
               alt="shiny ${pokemon.name}"
             />
+            <button
+              class="arrow-button-right"
+              type="button"
+              onclick="loadPokemonStats(${pokemon.id + 1});"
+            >
+              <img src="assets/img/right-arrow.svg" alt="back button" />
+            </button>
           </div>
           <div class="pokemon-images">
             <span class="name">Common ${pokemon.name}</span>
@@ -157,6 +171,13 @@ function loadPokemons(offset, limit) {
 }
 
 function loadPokemonStats(id) {
+  if (id <= 0) {
+    id = maxRecords;
+  }
+  if (id > maxRecords) {
+    id = 1;
+  }
+
   pokeapi.getPokemonStats(id).then((pokemon) => {
     pokemonDetailPage.innerHTML = pokemonToDetailPage(pokemon);
   });
