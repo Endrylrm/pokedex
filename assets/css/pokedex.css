@@ -226,7 +226,7 @@
 
 .pokemon-header .pokemon-images img {
   max-width: 100%;
-  height: 175px;
+  height: 125px;
   margin: 0.25rem 0.5rem;
 }
 
@@ -391,5 +391,11 @@
 
   .stats-bar {
     width: 90%;
+  }
+
+  .pokemon-header .pokemon-images img {
+    max-width: 100%;
+    height: 200px;
+    margin: 0.25rem 0.5rem;
   }
 }
