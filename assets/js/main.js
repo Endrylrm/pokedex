@@ -62,6 +62,14 @@ function pokemonToDetailPage(pokemon) {
               src="${pokemon.image}"
               alt="${pokemon.name}"
             />
+            <img
+              src="${pokemon.shinyImage}"
+              alt="shiny ${pokemon.name}"
+            />
+          </div>
+          <div class="pokemon-images">
+            <span class="name">Common ${pokemon.name}</span>
+            <span class="name">Shiny ${pokemon.name}</span>
           </div>
         </div>
         <div class="pokemon-stats">

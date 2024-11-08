@@ -219,7 +219,7 @@
 
 .pokemon-header .pokemon-images {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
 }
@@ -227,6 +227,11 @@
 .pokemon-header .pokemon-images img {
   max-width: 100%;
   height: 200px;
+}
+
+.pokemon-header .pokemon-images span {
+  margin: 0.25rem 1.5rem;
+  font-size: 1rem;
 }
 
 #return-to-pokemon-list {

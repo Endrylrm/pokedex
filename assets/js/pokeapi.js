@@ -60,6 +60,7 @@ class PokeAPI {
       pokemonStats.sprites.other.showdown.front_default
     );
 
+    pokemon.shinyImage = pokemonStats.sprites.other.showdown.front_shiny;
     pokemon.stats = pokemonStats.stats.map((stat) => stat.base_stat);
     pokemon.flavorTexts = flavorTexts;
 

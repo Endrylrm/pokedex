@@ -4,6 +4,7 @@ class Pokemon {
   mainType;
   types = [];
   image;
+  shinyImage;
   stats = [];
   flavorTexts = [];
 
