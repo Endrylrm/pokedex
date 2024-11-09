@@ -169,7 +169,7 @@ function loadPokemons(offset, limit) {
   pokeapi.getPokemons().then((pokemons) => {
     pokemonList.innerHTML += pokemons.map(pokemonToListItem).join("");
 
-    filterPokemons(searchBar.value);
+    filterPokemons(searchBar.value.toLowerCase().trim());
   });
 }
 
