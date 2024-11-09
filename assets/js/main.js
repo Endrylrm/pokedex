@@ -60,7 +60,7 @@ function pokemonToDetailPage(pokemon) {
           </div>
           <div class="pokemon-images">
             <button
-              class="arrow-button-left"
+              class="arrow-button left-button"
               type="button"
               onclick="loadPokemonStats(${pokemon.id - 1});"
             >
@@ -75,7 +75,7 @@ function pokemonToDetailPage(pokemon) {
               alt="shiny ${pokemon.name}"
             />
             <button
-              class="arrow-button-right"
+              class="arrow-button right-button"
               type="button"
               onclick="loadPokemonStats(${pokemon.id + 1});"
             >
