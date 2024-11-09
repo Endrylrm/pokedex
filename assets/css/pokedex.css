@@ -438,6 +438,10 @@
   .pokemon-header .pokemon-images img {
     max-width: 100%;
     height: 125px;
-    margin: 0.25rem 0.5rem;
+    margin: 0.25rem 1.25rem;
+  }
+
+  .pokemon-header .pokemon-images span {
+    margin: 0.25rem 2.5rem;
   }
 }
