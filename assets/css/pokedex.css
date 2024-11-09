@@ -286,11 +286,11 @@
   font-size: 1rem;
   padding: 0.25rem 0.5rem;
   cursor: pointer;
-  width: 25px;
+  width: 30px;
 }
 
 #return-to-pokemon-list img {
-  width: 25px;
+  width: 30px;
 }
 
 .details-title {
@@ -445,5 +445,9 @@
 
   .pokemon-header .pokemon-images span {
     margin: 0.25rem 2.5rem;
+  }
+
+  .arrow-button-right {
+    right: 2.35rem;
   }
 }

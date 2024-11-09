@@ -44,7 +44,7 @@ function pokemonToDetailPage(pokemon) {
               type="button"
               onclick="returnToPokemonList();"
             >
-              <img src="assets/img/back-button.svg" alt="back button" />
+              <img src="assets/img/return-arrow.svg" alt="return button" />
             </button>
           </div>
           <div class="pokemon-title">
