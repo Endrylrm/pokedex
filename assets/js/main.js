@@ -1,6 +1,7 @@
 const pokemonList = document.getElementById("pokemons");
 const pokemonDetailPage = document.getElementById("pokemon-detail");
 const loadMoreButton = document.getElementById("loadMore");
+const searchBar = document.getElementById("search-bar");
 
 const maxRecords = 151; // current max pokemon
 const limit = 10;
@@ -205,4 +206,18 @@ loadMoreButton.addEventListener("click", () => {
   } else {
     loadPokemons(offset, limit);
   }
+});
+
+searchBar.addEventListener("input", (event) => {
+  const value = event.target.value.toLowerCase().trim();
+
+  const pokemons = document.querySelectorAll("#pokemons .pokemon");
+
+  pokemons.forEach((pokemon) => {
+    if (pokemon.textContent.indexOf(value) !== -1) {
+      pokemon.style.display = "flex";
+    } else {
+      pokemon.style.display = "none";
+    }
+  });
 });

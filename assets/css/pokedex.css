@@ -11,6 +11,19 @@
   margin: 0;
 }
 
+.search {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.search-label {
+  padding: 0 0.5rem;
+  color: #808080;
+}
+
 .title {
   text-align: center;
 }
