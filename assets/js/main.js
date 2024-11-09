@@ -168,6 +168,8 @@ function loadPokemons(offset, limit) {
 
   pokeapi.getPokemons().then((pokemons) => {
     pokemonList.innerHTML += pokemons.map(pokemonToListItem).join("");
+
+    filterPokemons(searchBar.value);
   });
 }
 
@@ -193,6 +195,18 @@ function returnToPokemonList() {
   document.getElementById("pokemon-detail").className = "hidden";
 }
 
+function filterPokemons(value) {
+  const pokemons = document.querySelectorAll("#pokemons .pokemon");
+
+  pokemons.forEach((pokemon) => {
+    if (pokemon.textContent.indexOf(value) !== -1) {
+      pokemon.style.display = "flex";
+    } else {
+      pokemon.style.display = "none";
+    }
+  });
+}
+
 loadPokemons(offset, limit);
 
 loadMoreButton.addEventListener("click", () => {
@@ -213,13 +227,5 @@ loadMoreButton.addEventListener("click", () => {
 searchBar.addEventListener("input", (event) => {
   const value = event.target.value.toLowerCase().trim();
 
-  const pokemons = document.querySelectorAll("#pokemons .pokemon");
-
-  pokemons.forEach((pokemon) => {
-    if (pokemon.textContent.indexOf(value) !== -1) {
-      pokemon.style.display = "flex";
-    } else {
-      pokemon.style.display = "none";
-    }
-  });
+  filterPokemons(value);
 });
