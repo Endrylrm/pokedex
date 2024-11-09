@@ -179,6 +179,8 @@ function loadPokemonStats(id) {
     id = 1;
   }
 
+  pokemonDetailPage.innerHTML = "";
+
   pokeapi.getPokemonStats(id).then((pokemon) => {
     pokemonDetailPage.innerHTML = pokemonToDetailPage(pokemon);
   });
